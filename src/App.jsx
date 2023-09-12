@@ -9,10 +9,6 @@ import BookList from "./MyComponents/BookList";
 import { Col, Container, Row } from "react-bootstrap";
 import CommentArea from "./MyComponents/CommentArea";
 const App = () => {
-  // state = {
-  //   selected: false,
-  //   asin: "",
-  // };
   const [asin, setAsin] = useState("");
   const [selected, setSelected] = useState(false);
   const selectABook = (isSelected, asin) => {
@@ -21,16 +17,16 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div className="App bg-dark text-white">
       <MyNavBar />
 
       <MyJumbotron />
-      <Container>
+      <Container fluid>
         <Row>
-          <Col xs={6}>
+          <Col xs={8}>
             <BookList HorrorBooks={books} selected={selected} selectABook={selectABook} asinSelected={asin} />
           </Col>
-          <Col xs={6}>
+          <Col xs={4}>
             <CommentArea asinSelected={asin} />
           </Col>
         </Row>

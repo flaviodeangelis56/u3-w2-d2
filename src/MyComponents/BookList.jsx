@@ -3,9 +3,6 @@ import { Button, Container, Form, InputGroup, Row } from "react-bootstrap";
 import SingleBook from "./SingleBook";
 
 const BookList = props => {
-  // state = {
-  //   bookName: "",
-  // };
   const [bookName, setBookName] = useState("");
   const filterBookList = event => {
     event.preventDefault();
@@ -13,12 +10,12 @@ const BookList = props => {
     setBookName(serchedBook);
   };
   return (
-    <Container>
-      <InputGroup className="mb-3">
+    <Container fluid>
+      <InputGroup className="mb-3 justify-content-center">
         <Form onSubmit={filterBookList}>
           <Form.Group className="mb-3">
-            <Form.Label>Serch a Book</Form.Label>
-            <Form.Control type="text" id="serchBar" />
+            <Form.Label className="fs-1">Serch a Book</Form.Label>
+            <Form.Control type="text" id="serchBar" className="w-90" />
           </Form.Group>
           <Button type="submit">Serch</Button>
         </Form>

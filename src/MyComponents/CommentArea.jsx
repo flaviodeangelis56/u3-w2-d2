@@ -1,15 +1,8 @@
-import { Component, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import CommentsList from "./CommentsList";
 import { Alert, Spinner } from "react-bootstrap";
 
 const CommentArea = props => {
-  // state = {
-  //   isLoading: true,
-  //   commentsArr: [],
-  //   elementId: this.props.asinSelected,
-  //   error: false,
-  // };
-
   const [isLoading, setIsloading] = useState(true);
   const [commentsArr, setCommentsArr] = useState([]);
   const [error, setError] = useState(false);
@@ -42,16 +35,6 @@ const CommentArea = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.asinSelected]);
 
-  // componentDidMount = async () => {
-  //   this.commentFetch();
-  //   console.log("didMount");
-  // };
-  // componentDidUpdate = async (prevProps, prevState) => {
-  //   if (prevProps.asinSelected !== this.props.asinSelected) {
-  //     this.commentFetch();
-  //     console.log("didUpdate");
-  //   }
-  // };
   return (
     <>
       {error && <Alert variant="danger">Si è verificato un errore durante fetch</Alert>}

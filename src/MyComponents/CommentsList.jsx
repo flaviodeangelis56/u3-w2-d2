@@ -3,11 +3,6 @@ import SingleComment from "./SingleComment";
 import AddComments from "./AddComment";
 
 const CommentsList = props => {
-  // state = {
-  //   filteredComments: [],
-  // };
-
-  // const [filteredComments,setFilteredComments]= useState([])
   return (
     <>
       <ul>
