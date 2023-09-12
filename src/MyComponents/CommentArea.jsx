@@ -31,7 +31,10 @@ const CommentArea = props => {
   };
 
   useEffect(() => {
-    commentFetch();
+    if (props.asinSelected !== "") {
+      commentFetch();
+    }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.asinSelected]);
 
