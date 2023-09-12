@@ -1,15 +1,15 @@
-import { Component, useState } from "react";
 import SingleComment from "./SingleComment";
 import AddComments from "./AddComment";
+import { ListGroup } from "react-bootstrap";
 
 const CommentsList = props => {
   return (
     <>
-      <ul>
+      <ListGroup>
         {props.comArr.map((comObj, i) => (
           <SingleComment comment={comObj} key={i} />
         ))}
-      </ul>
+      </ListGroup>
       <AddComments asinSelected={props.asinSelected} />
     </>
   );

@@ -9,7 +9,9 @@ function MyJumbotron() {
         choose your favorites
       </p>
       <p>
-        <Button variant="primary">Cart </Button>
+        <Button variant="danger" style={{ width: "10%" }}>
+          Cart{" "}
+        </Button>
       </p>
       <hr />
     </div>

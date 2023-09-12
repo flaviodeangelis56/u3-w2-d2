@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, ListGroup } from "react-bootstrap";
 
 const SingleComment = props => {
   const removeComment = async () => {
@@ -17,9 +17,14 @@ const SingleComment = props => {
 
   return (
     <>
-      <li>{props.comment.comment}</li>
-      <li>{props.comment.rate}</li>
-      <Button onClick={removeComment}>Remove</Button>
+      {/* <li>{props.comment.comment}</li>
+      <li>{props.comment.comment}</li> */}
+      <ListGroup.Item className="w-75 mb-3 text-center">
+        {props.comment.comment} rate:{props.comment.rate}
+        <Button onClick={removeComment} variant="danger" className="ms-5">
+          Remove
+        </Button>
+      </ListGroup.Item>
     </>
   );
 };

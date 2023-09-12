@@ -34,13 +34,14 @@ const AddComments = props => {
   };
 
   return (
-    <InputGroup className="mb-1">
-      <Form onSubmit={AddComment}>
+    <InputGroup className="mb-1 justify-content-start">
+      <Form onSubmit={AddComment} className="w-75">
         <Form.Group className="mb-1">
           <Form.Control
             type="text"
             placeholder="add a comment"
             onChange={event => SetStateComment("comment", event.target.value)}
+            className="mb-2"
           />
           <Form.Control
             type="text"
@@ -48,7 +49,9 @@ const AddComments = props => {
             onChange={event => SetStateComment("rate", event.target.value)}
           />
         </Form.Group>
-        <Button type="submit">Add</Button>
+        <Button type="submit" variant="danger">
+          Add
+        </Button>
       </Form>
     </InputGroup>
   );

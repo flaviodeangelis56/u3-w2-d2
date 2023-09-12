@@ -12,12 +12,14 @@ const BookList = props => {
   return (
     <Container fluid>
       <InputGroup className="mb-3 justify-content-center">
-        <Form onSubmit={filterBookList}>
+        <Form onSubmit={filterBookList} className="w-75">
           <Form.Group className="mb-3">
             <Form.Label className="fs-1">Serch a Book</Form.Label>
             <Form.Control type="text" id="serchBar" className="w-90" />
           </Form.Group>
-          <Button type="submit">Serch</Button>
+          <Button type="submit" className="w-25" variant="danger">
+            Serch
+          </Button>
         </Form>
       </InputGroup>
       <Row>

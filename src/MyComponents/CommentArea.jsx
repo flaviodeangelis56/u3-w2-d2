@@ -42,7 +42,7 @@ const CommentArea = props => {
       {props.asinSelected && !isLoading ? (
         <CommentsList comArr={commentsArr} elementId={props.asinSelected} asinSelected={props.asinSelected} />
       ) : (
-        "seleziona un libro per vedere i suoi commenti"
+        !isLoading && "seleziona un libro per vedere i suoi commenti"
       )}
     </>
   );
